@@ -1,0 +1,12 @@
+{
+  "name": "dknoll/328/pets",
+  "authors": [
+    {
+      "name": "Daniel Knoll",
+      "email": "knollmdan@gmail.com"
+    }
+  ],
+  "require": {
+    "bcosca/fatfree-core": "dev-master"
+  }
+}
