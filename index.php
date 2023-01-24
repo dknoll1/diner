@@ -17,6 +17,25 @@ $f3->route('GET /', function() {
     echo $view->render('views/diner-home.html');
 });
 
+$f3->route('GET /breakfast', function() {
+
+    $view = new Template();
+    echo $view->render('views/breakfast.html');
+
+});
+$f3->route('GET /breakfast', function() {
+
+    $view = new Template();
+    echo $view->render('views/breakfast.html');
+
+});
+$f3->route('GET /order1', function() {
+
+    $view = new Template();
+    echo $view->render('views/order-form1.html');
+
+});
+
 // Run Fat Free
 $f3->run();
 
