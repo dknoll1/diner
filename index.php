@@ -30,5 +30,33 @@ $f3->route('GET /breakfast', function() {
     echo $view->render('views/breakfastmenu.html');
 });
 
+$f3->route('GET|POST /order1', function($f3) {
+//    echo "Breakfast";
+
+
+    //if form has been posted
+    if($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+        $food = $_POST['food'];
+        $meal = $_POST['meal'];
+
+        $f3->set('SESSION.food', $food);
+        $f3->set('SESSION.meal', $meal);
+
+        $f3->reroute('summary');
+    }
+
+//    display  view page
+    $view = new Template();
+    echo $view->render('views/order-form-1.html');
+});
+
+$f3->route('GET /summary', function() {
+//    echo "Breakfast";
+//    display  view page
+    $view = new Template();
+    echo $view->render('views/summary.html');
+});
+
 // run f3
 $f3->run();
