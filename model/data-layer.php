@@ -4,12 +4,16 @@
  * this file represents my data layer for the diner app
  */
 
-function getMeals()
+class DataLayer
 {
-    return array('breakfast','lunch','dinner');
-}
+    static function getMeals()
+    {
+        return array('breakfast', 'lunch', 'dinner');
+    }
 
-function getCondiments()
-{
-    return array('ketchup','mustard','siracha');
+    static function getCondiments()
+    {
+        return array('ketchup', 'mustard', 'siracha');
+    }
+
 }
